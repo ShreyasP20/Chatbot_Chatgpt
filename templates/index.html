@@ -19,7 +19,7 @@
 
 <body>
   <div class="container mt-5">
-    <h1 style="color:white">Chat Bot</h1>
+    <h1 style="color:white">SenesGrass ChatBot</h1>
     <div class="chat-box mt-3">
       <!-- Chat messages will be added here dynamically -->
     </div>
@@ -53,7 +53,7 @@ function highlightAll() {
       }
 
       messageDiv.innerHTML = `
-        <img src="{{ url_for('static', filename='images/user.png') }}" class="user-icon"><p>${message}</p>
+        <img src="{{ url_for('static', filename='images/user1.jpeg') }}" class="user-icon"><p>${message}</p>
         `;
 
       chatBox.appendChild(messageDiv);
@@ -92,11 +92,11 @@ function highlightAll() {
               const codeContent = content.replace(/```([\s\S]+?)```/g, '</p><pre><code>$1</code></pre><p>');
 
              
-              messageDiv.innerHTML = `<img src="{{ url_for('static', filename='images/gpt.jpg') }}" class="bot-icon"><p>${codeContent}</p>`
+              messageDiv.innerHTML = `<img src="{{ url_for('static', filename='images/sensegrass.jpg') }}" class="bot-icon"><p>${codeContent}</p>`
              
             }
             else{
-              messageDiv.innerHTML = `<img src="{{ url_for('static', filename='images/gpt.jpg') }}" class="bot-icon"><p>${content}</p>`
+              messageDiv.innerHTML = `<img src="{{ url_for('static', filename='images/sensegrass.jpg') }}" class="bot-icon"><p>${content}</p>`
             }
             chatBox.appendChild(messageDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
